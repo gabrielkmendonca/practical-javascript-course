@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling a JavaScript File</title>
+    <script>
+        window.alert("internal script in the head")
+    </script>
+</head>
+<body>
+    <h1>Calling a JavaScript File</h1>
+    <p>There are 2 ways of calling a JavaScript function. It can be either internal ou external calls.</p>
+    <ul>
+        <li>
+            For internal calling, use the &lt;script&gt; tag. It can be used in both &lt;head&gt; and &lt;body&gt; sections.
+        </li>
+        <li>
+            For external calling, it is possible to call a JavaScript file using the &lt;script:src&gt; tag. It's preferable to use in the end of the &lt;body&gt;, .
+        </li>
+    </ul>
+    <p>Script calling priority depends on the order in wich scripts are called, regardless of the section in which they are inserted</p>
+    <h2>External JavaScript Advantages</h2>
+    <ul>
+        <li>It separates the HTML and the code</li>
+        <li>It makes HTML and JavaScript easier to read and maintain</li>
+        <li>Cached JavaScript files can speed up page loads</li>
+        <li>The same JavaScript can be used for more than one page</li>
+        
+    </ul>
+    <script>
+        window.alert("internal script in the body")
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
