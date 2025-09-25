@@ -1,0 +1,2 @@
+document.writeln("In order to write something on the document via JavaScript, use document.writeln() and just insert the string inside the parenthesis.")
+window.alert("If you want an alert box to display a data, just use 'window.alert()' with the message inside the parenthesis.")
