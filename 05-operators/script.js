@@ -55,6 +55,6 @@ x >= 5 //greater than or equal to
 x <= 5 //less than or equal to
 
 //Logical
-&& //logical and
-|| //logical or
-!  //logical not
+"&&" //logical and
+"||" //logical or
+"!"  //logical not
