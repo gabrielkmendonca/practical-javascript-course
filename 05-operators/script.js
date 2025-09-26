@@ -58,3 +58,11 @@ x <= 5 //less than or equal to
 "&&" //logical and
 "||" //logical or
 "!"  //logical not
+
+//Logical Assignment
+let t = true
+let f = false
+let n
+let ft = t &&= 10;  //if the first value is true, the second value is assigned 
+let ff = f ||= 10; //if the first value is false, the second value is assigned
+let fn = n ??= 10;  //if the first value is undefined or null, the second value is assigned
