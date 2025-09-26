@@ -22,7 +22,11 @@ while(x < 10)
 
 //for loop 
 let text2 = ""
-for (y = 1; y < 10; y++){ //exp1 - defines the variable; exp2 - defines the condition; exp3 - defines the increment/decrement
+for (y = 1; y < 10; y++){ 
+/*exp1 - defines the variable; exp2 - defines the condition; exp3 - defines the increment/decrement
+----exp1 can be omitted if the variable has been set before the loop
+----exp2 can be omitted, but then uses the keyword "break", otherwise it will be an infinite loop
+----exp3 can be omitted if the value increments inside the loop */
     text2 += `${y}° repetition `
 }
 console.log(text2)
