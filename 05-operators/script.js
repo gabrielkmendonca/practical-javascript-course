@@ -48,7 +48,7 @@ x **= a // exponentiate the variable by the value
 x == 5 //equal to
 x === 5 //equal value and equal type 
 x != 5 //not equal
-x !== 5 //not equal value and not equal type
+x !== 5 //equal value and not equal type
 x > 5 //greater than
 x < 5 //less than
 x >= 5 //greater than or equal to
@@ -66,3 +66,8 @@ let n
 let ft = t &&= 10;  //if the first value is true, the second value is assigned 
 let ff = f ||= 10; //if the first value is false, the second value is assigned
 let fn = n ??= 10;  //if the first value is undefined or null, the second value is assigned
+
+//Ternary Operator (?:)
+"logical test" ? "what happens if true" : "what happens if false"
+let average = 8.5
+average >= 7 ? "Approved" : "Failed"
