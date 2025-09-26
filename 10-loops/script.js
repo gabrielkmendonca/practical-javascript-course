@@ -31,4 +31,19 @@ for (y = 1; y < 10; y++){
 }
 console.log(text2)
 
+console.log("There are 2 statement commonly used in loops: break and continue.")
+console.log("The 'break' statement terminates the loop immediately")
 
+//break statement
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  text += "The number is " + i + "<br>";
+}
+
+console.log("The 'continue' statement skips the current iteration in a loop, skipping the remaining code")
+
+//continue statement
+for (let i = 1; i < 10; i++) {
+  if (i === 3) { continue; } //if the variable "i" is equal to 3, the variable "text" will not receive the increment
+  text += "The number is " + i + "<br>";
+}
