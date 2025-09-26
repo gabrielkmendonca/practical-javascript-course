@@ -55,9 +55,9 @@ x >= 5 //greater than or equal to
 x <= 5 //less than or equal to
 
 //Logical
-"&&" //logical and
-"||" //logical or
-"!"  //logical not
+"&&" //logical and — true if all statements are true
+"||" //logical or — true if at least one statement is true
+"!"  //logical not — change de boolean value of the statement
 
 //Logical Assignment
 let t = true
