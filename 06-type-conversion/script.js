@@ -18,3 +18,7 @@ console.log('w variable is a ' + typeof w)
 //Convert to string
 let s = String(y)
 console.log('s variable is a ' + typeof s)
+
+//Convert to bigInt
+let big = BigInt(9999999999999999999999999999999999)
+console.log("big variable is a " + typeof big)
