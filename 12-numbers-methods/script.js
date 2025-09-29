@@ -47,4 +47,3 @@ Number.MIN_SAFE_INTEGER //represents the lowest possible integer number in JavaS
 Number.POSITIVE_INFINITY //infinity
 Number.NEGATIVE_INFINITY //-infinity
 Number.NaN //reserved word for a number that is not a legal number
-
