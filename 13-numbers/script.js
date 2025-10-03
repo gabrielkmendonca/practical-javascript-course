@@ -1,4 +1,11 @@
 let x = 1678
+let y = 123e5
+
+console.log(`JavaScript has only one type of number, that can be written with or without decimals`)
+console.log(`Extra large or extra small numbers can be written with scientific (exponent) notation, such as ${y}`)
+console.log(`Integers are accurate up to 15 digits, and the maximum number of decimals are 17. Floating number aren't 100% accurate, so to solve this problem, it helps to multiply then divides by 10`)
+console.log(`JavaScript is able to capture a numeric value from a string and do calculations even if the data types are different, except for the sum operator, as it will concatenate. As long as there are a string on the sum expression, it will always concatenate all the values`)
+
 
 console.log("Basic Numbers Methods")
 
@@ -25,8 +32,6 @@ Number.isSafeInteger() //checks if the argument is a safe integer (can be exactl
 Number.parseFloat() //converts a string to a number. Same as "parseFloat()"
 Number.parseInt() //converts a string to a whole number. Same as "parseInt()"
 
-
-console.log("Numbers Properties")
 
 console.log("Locale Numbers")
 

@@ -2,6 +2,18 @@ let txt = " HELLO WORLD "
 let text1 = "HELLO"
 let text2 = "WORLD"
 
+console.log(`Strings are for storing text written with single or double quotes, and backticks (template strings)`)
+console.log(`If you want to display a string that contains quotes, make sure they don't match the quotes surroundings the string, or just use the template string method`)
+
+
+console.log("Template String")
+//strings wirtten with bacsticks
+
+console.log(`Strings written between backticks allow you to insert special functions
+    (such as multiline strings),
+    as well as variables without the need for concatenation `)
+
+
 console.log("Basic String Methods")
 //take note the index always starts on 0
 
