@@ -39,3 +39,29 @@ const isoDT = new Date("2015-03-25T12:00:00Z") //ISO Dates Date-Time (YYYY-MM-DD
 const short = new Date("03/25/2015") //Short Dates (YYYY/MM/DD) — may produce error in some browsers
 const long = new Date("Mar 25 2015") //Long Dates (MMM DD YYYY) — may produce error in some browsers — month and day can change order 
 let msec = Date.parse("March 21, 2012") //returns the number of milliseconds between the date and January 1, 1970 — use "const d = new Date(msec);" to convert the milliseconds to a date
+
+
+console.log("Date Get Methods")
+
+d.getFullYear() //returns the year of a date as a four digit number
+d.getMonth() //returns the month of a date as a number (0 - 11)
+d.getDate() //returns the day of a date as a number (1 - 31)
+d.getHours() //returns the hours of a date as a number (0 - 23)
+d.getMinutes() //returns the minutes of a date as number (0 - 59)
+d.getSeconds() //returns the seconds of a date as a number ()
+d.getMilliseconds() //returns the milliseconds of a date as a number (0 - 999)
+d.getDay() //returnds the weekday of a date as a number (0 - 6)
+d.getTime() //returns the number of milliseconds since January 1, 1970 — can be used as Date.now()
+d.getTimezoneOffset() //returns the difference (in minutes) between local time and UTC time
+
+
+console.log("Set Date Methods")
+
+d.setFullYear() //sets the year as a date object — can optionally set month and day
+d.setMonth() //sets the month of a date object (0-11)
+d.setDate() //sets the day of a date object (1-31)
+d.setHours() //sets the hours of a date object (0-23) — can optionally set minutes and seconds
+d.setMinutes() //sets the minutes of a date object (0-59)
+d.setSeconds() //sets the seconds of a date object (0-59)
+d.setMilliseconds() //sets the milliseconds of a date object (0-999)
+d.setTime() //sets the milliseconds since January 1, 1970
