@@ -53,3 +53,20 @@ let lastIndex = numbers.findLastIndex(x => x > 18) //returns the index of the la
 
 console.log("Array Alphabetic Sort")
 
+fruits.sort() //sorts an array alphabetically
+fruits.reverse() //reverts the elements in an array
+const sorted = fruits.toSorted() //sorts an array alphabetically without altering the original, by creating a new array
+const reversed = fruits.toReversed() //reverts the elements in an array without altering the original, by creating a new array
+
+
+console.log("Array Numeric Sort")
+
+numbers.sort(function (a,b) {return a - b}) //compare function is needed to properly consider the values as numbers, and not as strings
+numbers.sort(function(){return 0.5 - Math.random()}) //the most accurate way to random sort is by using the Fisher Yates Method below
+        for (let i = numbers.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i+1));
+            let k = numbers[i];
+            numbers[i] = numbers[j];
+            numbers[j] = k;
+        }
+//for max and min numerically, just sort and search by index (0 for min, and -1 for max)
