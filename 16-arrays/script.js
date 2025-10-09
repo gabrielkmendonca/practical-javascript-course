@@ -70,3 +70,23 @@ numbers.sort(function(){return 0.5 - Math.random()}) //the most accurate way to 
             numbers[j] = k;
         }
 //for max and min numerically, just sort and search by index (0 for min, and -1 for max)
+
+
+console.log("Array Iteration Methods")
+
+const text = "ABCDEFGHI"
+let a
+let rest
+const arr = [1, 2, 3, 4, 5, 6, 7, 8]
+
+numbers.forEach(x => x * 2) //calls a callback function once for each array element
+const numbers2 = numbers.map(x => x * 2) //creates a new array by performing a function on each array element
+const numbers3 = numbers.flatMap(x => x * 10) //maps all elements of an array and then creates a new array by flattening the array
+const over18 = numbers.filter(x => x > 18) //creates a new array with array elements that pass a test
+let allOver18 = numbers.every(x => x > 18) //checks if all array elements pass a test
+let someOver18 = numbers.some(x => x > 18) //checks if soma array elements pass a test
+Array.from(text) //creates an array objects from an iterable object or a object with a length property
+const keys = numbers.keys() //returns an Array Iterator object with the keys of an array
+const entry = fruits.entries() //create an Array Iterator, and then iterate over the key/value pairs
+const myFruits = fruits.with(2, "Strawberry") //updates an array without altering the original, by creating a new array
+const children = [...myGirls, ...myBoys] //used in order to join arrays — if only uses one array, it will be copied
