@@ -9,7 +9,28 @@ let z = null //null = stores null value
 const car = {type:"Fiat", model:"500", color:"white"} //object = a variable that can hold many variables
 let cars = ["Volvo", "BMW", "Audi"] //array object = stores a list of values
 let big = 9999999999999999999999999n //bigint = stores values bigger than JavaScript integer limits, granting precision
+const date = new Date("2025-10-22") //date = stores the value of a date
  
 
 console.log('You can always use the "typeof" operator to check the type of a JavaScript variable')
 console.log(typeof color)
+console.log(`There are 7 possible values for primitive data types:
+    - string
+    - number
+    - boolean
+    - bigint
+    - symbol
+    - null
+    - undefined
+And there 2 possible values for complex data type:
+    - object
+        object data type can be:
+            - objects
+            - arrays 
+            - sets 
+            - maps
+    - function`)
+
+
+console.log(`You can also use the "instanceof" operator to check if an object is an instance of a specified object type`)
+console.log(cars instanceof Array)
