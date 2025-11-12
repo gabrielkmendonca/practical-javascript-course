@@ -50,3 +50,13 @@ const member = {firstName:"Hege", lastName: "Nilsen"}
 person3.fullName.call(person4); //call an object method with another object as argument
 let fullName = person3.fullName.bind(member) //borrow a method from another object
 person3.fullName.apply(person4, ["Oslo"]) //call an object method with another object as argument, taking/accepting arguments as an array
+
+
+console.log("Object Destructuring")
+console.log("The destructuring assignment syntax unpack object properties into variables")
+
+const person5 = {firstName: "John", lastName: "Doe", age: 50};
+
+let {firstName, lastName} = person5 //assigns variables containing the object values
+let {firstName : name} = person5 //Object Property Alias — assign the firstName value to "name"
+
