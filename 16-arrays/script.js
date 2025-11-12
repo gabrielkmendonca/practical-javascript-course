@@ -97,4 +97,4 @@ console.log("The destructuring assignment syntax unpack object properties into v
 let [fruit1, fruit2] = fruits; //assigns variables containing the array values
 let [fruit3,,,fruit4] = fruits; //can skip array values using two or more commas
 let {[0]:fruit5 ,[1]:fruit6} = fruits; //can pick up values from specific index locations of an array
-let [n1, n2, ...rest] = numbers //this syntax will store all remaining values into a new array
+let [n1, n2, ...remaining] = numbers //this syntax will store all remaining values into a new array
