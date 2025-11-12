@@ -76,7 +76,6 @@ console.log("Array Iteration Methods")
 
 const text = "ABCDEFGHI"
 let a
-let rest
 const arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
 numbers.forEach(x => x * 2) //calls a callback function once for each array element
@@ -90,3 +89,12 @@ const keys = numbers.keys() //returns an Array Iterator object with the keys of 
 const entry = fruits.entries() //create an Array Iterator, and then iterate over the key/value pairs
 const myFruits = fruits.with(2, "Strawberry") //updates an array without altering the original, by creating a new array
 const children = [...myGirls, ...myBoys] //used in order to join arrays — if only uses one array, it will be copied
+
+
+console.log("Array Destructing")
+console.log("The destructuring assignment syntax unpack object properties into variables")
+
+let [fruit1, fruit2] = fruits; //assigns variables containing the array values
+let [fruit3,,,fruit4] = fruits; //can skip array values using two or more commas
+let {[0]:fruit5 ,[1]:fruit6} = fruits; //can pick up values from specific index locations of an array
+let [n1, n2, ...rest] = numbers //this syntax will store all remaining values into a new array
