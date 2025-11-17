@@ -18,27 +18,34 @@ console.log("Object Methods")
 const fruits = [["apples", 300],["pears", 900],["bananas", 500]];
 const person1 = {firstName: "John",lastName: "Doe",age: 50,eyeColor: "blue"};
 const person2 = {firstName: "Anne",lastName: "Smith"};
+function myCallback({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
 
-const man = Object.create(person) //Object.create() method creates an object from an existing object
-const myObj = Object.fromEntries(fruits) //Object.fromEntries() method creates an object from iterable key / value pairs
-Object.assign(person1, person2) //Object.assign() method copies properties from one or more source objects to a target object
+Object.assign(person1, person2) //copies properties from one or more source objects to a target object
+const man = Object.create(fruits) //creates an object from an existing object
+let text0 = Object.entries(fruits) //returns an array of the key/value pairs in an object
+const myObj = Object.fromEntries(fruits) //creates an object from a list of key/value pairs
+let values = Object.values(fruits) //returns a single dimension array of the object values
+let keys = Object.keys(fruits) //returns an array with the keys of an object
+const result = Object.groupBy(fruits, myCallback) //groups elements of an object according to string values returned from a callback function
 
 
 console.log("Object Constructor Function")
 console.log("Sometimes we need to create many objects of the same type, for that we use function to create an object type.")
 
-function person(first, last, age, eye){
+function Person(first, last, age, eye){
     this.firstName = first; 
     this.lastName = last; 
     this.age = age; 
     this.eyeColor = eye;
     this.nationality = "Brazilian" //A value given to a property will be a default value for all objects created by the constructor
 }
-const myFather = new person("John", "Doe", 50, "blue");
+const myFather = new Person("John", "Doe", 50, "blue");
 myFather.nationality = "English" //Adding a property to a created object
-const myMother = new person("Sally", "Rally", 48, "green");
-const mySister = new person("Anna", "Rally", 18, "green");
-const mySelf = new person("Johnny", "Rally", 22, "green");
+const myMother = new Person("Sally", "Rally", 48, "green");
+const mySister = new Person("Anna", "Rally", 18, "green");
+const mySelf = new Person("Johnny", "Rally", 22, "green");
 
 
 console.log("Explicit Function Binding")
@@ -59,4 +66,14 @@ const person5 = {firstName: "John", lastName: "Doe", age: 50};
 
 let {firstName, lastName} = person5 //assigns variables containing the object values
 let {firstName : name} = person5 //Object Property Alias — assign the firstName value to "name"
+
+
+console.log("Object Prototype Property")
+console.log("The JavaScript prototype property allows you to add new properties to object constructors")
+
+Person.prototype.pet = "Dog" //add a property called "pet" to the Person object constructor, with "dog" as the default value
+Person.prototype.fullName = function() {return this.firstName + " " + this.lastName} //prototype property also allows to add new methods
+
+
+console.log("Properties Management Methods")
 
