@@ -75,5 +75,12 @@ Person.prototype.pet = "Dog" //add a property called "pet" to the Person object 
 Person.prototype.fullName = function() {return this.firstName + " " + this.lastName} //prototype property also allows to add new methods
 
 
-console.log("Properties Management Methods")
+console.log("Object Protection Methods")
 
+const vehicle = {type:"Fiat", model:"500", color:"white"} //using const you can not re-assign the object
+Object.preventExtensions(vehicle) //prevents adding properties to an object
+let ext = Object.isExtensible(vehicle) //checks if an object is extensible
+Object.seal(vehicle) //prevents additions or deletions of new properties
+let seal = Object.isSealed(vehicle) //checks if an object is sealed
+Object.freeze(vehicle) //prevents any changes to an object. No modification, addition or deletion of properties are allowed
+let frz = Object.isFrozen(vehicle) //checks if an object is frozen
