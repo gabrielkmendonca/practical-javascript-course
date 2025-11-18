@@ -68,3 +68,35 @@ for (let x in person) {
 
 
 console.log("For...of Loop") //iterates over the values of iterable objects such as arrays, strings, Maps, Sets, and NodeLists
+
+//over a String
+const name = "W3Schools";
+
+for (const x of name) {
+
+}
+
+//over an Array
+const numbers = [2,4,6,8];
+
+for (const x of numbers) {
+  
+}
+
+//over a Set
+const letters = new Set(["a","b","c"]);
+
+for (const x of letters) {
+
+}
+
+//over a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+for (const x of fruits) {
+  
+}
