@@ -1,18 +1,23 @@
 console.log("Loops can execute a block of code a determined number of times, over and over again, as long as the specified condition is true.")
 console.log("When working with loops, we have 3 possible statements: while; do while; for.")
 
-//while loop — usually used when we don't know exactly how many times it needs to repeat
+
+console.log("While Loop") //usually used when we don't know exactly how many times it needs to repeat
+
 let i = 1
 let text0 = ""
+
 while (i < 10){ //the condition needs to be specified inside the parenthesis
     text0 += `${i}° repetition `  
     i++ //it needs to have a increment/decrement, otherwise it will create an infinite loop
 }
-console.log(text0)
 
-//do while — executes the code block once, before checking the specified condition
+
+console.log("Do While Loop") //executes the code block once, before checking the specified condition
+
 let x = 1
 let text1 = ""
+
 do{
     text1 += `${x}° repetition ` 
     x++
@@ -20,8 +25,11 @@ do{
 while(x < 10)
     console.log(text1)
 
-//for loop 
+
+console.log("For Loop") //usually used when we know how many times it needs to repeat
+
 let text2 = ""
+
 for (y = 1; y < 10; y++){ 
 /*exp1 - defines the variable; exp2 - defines the condition; exp3 - defines the increment/decrement
 ----exp1 can be omitted if the variable has been set before the loop
@@ -47,3 +55,16 @@ for (let i = 1; i < 10; i++) {
   if (i === 3) { continue; } //if the variable "i" is equal to 3, the variable "text" will not receive the increment
   text += "The number is " + i + "<br>";
 }
+
+
+console.log("For...in Loop") //iterates over the enumerable properties of an object
+
+const person = {fname:"John", lname:"Doe", age:25};
+text = ""
+
+for (let x in person) {
+  text += person[x];
+}
+
+
+console.log("For...of Loop") //iterates over the values of iterable objects such as arrays, strings, Maps, Sets, and NodeLists
