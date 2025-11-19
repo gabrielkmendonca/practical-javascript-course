@@ -101,3 +101,9 @@ function myCalculator(num1, num2, myCallback) {
 }
 
 myCalculator(5, 5, myDisplayer); //"myDisplayer" is a callback — a function passed (without parenthesis) as an argument to another function 
+
+
+console.log("Asynchronous Functions")
+
+setTimeout(myFunction, 3000) //a function is especified to be executed on time-out. 3000 is the time in milliseconds (so it is 3 seconds)
+setInterval(myFunction, 1000) //a function is especified to be executed for each interval
