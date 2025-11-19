@@ -87,3 +87,17 @@ let myGenerator = myStream();
 for (const x of myGenerator){ //use iteration to display the values returned from the generator function
   console.log(x)
 }
+
+
+console.log("Callback Function")
+
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer); //"myDisplayer" is a callback — a function passed (without parenthesis) as an argument to another function 
