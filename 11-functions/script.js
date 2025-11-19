@@ -84,6 +84,6 @@ yield 3;
 
 let myGenerator = myStream();
 
-for (let x of myGenerator){ //use iteration to display the values returned from the generator function
+for (const x of myGenerator){ //use iteration to display the values returned from the generator function
   console.log(x)
 }
