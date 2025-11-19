@@ -68,3 +68,18 @@ const person1Arg = {
 personArg.fullName.call(person1Arg, "Oslo", "Norway");
 
 
+console.log("Generator Function")
+console.log("A JavaScript Generator is a function that can return multiple values, one by one")
+
+function* myStream() { //the Generator Function is defined using the "function*" syntax
+// return {value:1, done:false}
+yield 1; //pauses execution and yield a value back to the caller
+
+// return {value:2, done:false}
+yield 2;
+
+// return {value:3, done:true}
+yield 3;
+}
+
+let myGenerator = myStream();
