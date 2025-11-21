@@ -107,3 +107,39 @@ console.log("Asynchronous Functions")
 
 setTimeout(myFunction, 3000) //a function is especified to be executed on time-out. 3000 is the time in milliseconds (so it is 3 seconds)
 setInterval(myFunction, 1000) //a function is especified to be executed for each interval
+
+
+console.log("JavaScript Promise Object")
+console.log("A Promise contains both the producing code and calls to the consuming code")
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+  if (x == 0) {
+    myResolve("Okay"); // when successful
+  } else {
+    myReject("Error");  // when error
+  }
+});
+myPromise.then(
+  function(value) { myPromise(value) },
+  function(error) { myPromise(error) }
+  //Both callbacks are optional, so you can add a callback for success or failure only
+);
+
+console.log(`The Promise object supports two properties: state and result.
+  - While a Promise object is "pending" (working), the result is undefined.
+  - When a Promise object is "fulfilled", the result is a value.
+  - When a Promise object is "rejected", the result is an error object.`)
+
+
+console.log("JavaScript Async & Await")
+
+async function myDisplay() { //The keyword async before a function makes the function return a promise
+  let myPromise = new Promise(function(resolve, reject) {
+    setTimeout(function() {resolve("I love You !!");}, 3000);
+  });
+  console.log(await myPromise) //The await keyword makes the function pause the execution and wait for a resolved promise before it continues
+}
+
+myDisplay();
