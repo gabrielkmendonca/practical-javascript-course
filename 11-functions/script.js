@@ -24,12 +24,24 @@ const x = function (n1, n2) {return n1 * n2};
 let y = x(4, 3); //calls the variable containing the function expression
 
 
-console.log("Anonymous Self-invoking Function")
+console.log("IIFE — Immediately Invoked Function Expression")
 console.log(`Function expressions can be made "self-invoking"`)
 
 (function () { //add parentheses around the function to indicate that it is a function expression
   let x = "Hello!!"
-})(); //in order to execute automatically, the expression needs to be followed by ()
+})(); //The final () executes the function immediately
+
+(function (name) { //IIFE can have parameters
+  let x = "Hello!!" + name
+})("John Doe"); 
+
+(() => { //IIFE as an Arrow Function
+  let text = "Hello! I called myself.";
+})();
+
+((name) => { //IIFE Arrow Function can also take parameters
+  let text = "Hello!" + name + "I called myself.";
+})("John Doe");
 
 
 console.log("Function Used as Value")
@@ -38,6 +50,17 @@ console.log("Functions can be used as a value in a expression")
 sumFunction = (a = 1, b = 1) => (a + b) //parameters can have default values, that will be considered if no argument is sent during the invoke
 let exp = sumFunction(2, 3) * 2; //calls the function and multiplies its returned value by 2
 console.log(exp)
+
+
+console.log("Function Rest Parameter")
+
+function sum(...args) { //the rest parameter allows a function to treat an indefinite number of arguments as an array
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let rest = sum(4, 9, 16, 25, 29, 100, 66, 77);
 
 
 console.log("JavaScript call() Method")
