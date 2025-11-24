@@ -8,9 +8,10 @@ const car = {type:"Fiat", model:"500", color:"white"}; //An object literal is a 
 
 console.log("Object Properties")
 
-console.log(`There are 2 ways of access objects properties:
+console.log(`There are 3 ways of access objects properties:
         - objectName.propertyName
-        - objectName["propertyName"]`)
+        - objectName["propertyName"]
+        - let variable = objectName[x]`)
 
 
 console.log("Object Methods")
@@ -29,6 +30,24 @@ const myObj = Object.fromEntries(fruits) //creates an object from a list of key/
 let values = Object.values(fruits) //returns a single dimension array of the object values
 let keys = Object.keys(fruits) //returns an array with the keys of an object
 const result = Object.groupBy(fruits, myCallback) //groups elements of an object according to string values returned from a callback function
+delete person1[firstName] //deletes a property from an object
+let json = JSON.stringify(person1) //converts to a string with JSON method
+Object.entries(fruits) //built-in method that makes it simple to use objects in loops
+
+
+console.log("Nested Objects")
+
+myObj = {
+  name:"John",
+  age:30,
+  myCars: { //property values in an object can be other objects
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+
+myObj.MyCars.car2 //You can access nested objects using the dot notation or the bracket notation
 
 
 console.log("Object Constructor Function")
